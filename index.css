@@ -1,0 +1,195 @@
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+
+@media all and (max-width:850px){
+
+    .headNav.media{
+        padding: 10px 10px;
+        justify-content:space-between;
+    }
+    .headNav.media li.search{
+        flex: 1 1 auto;
+        margin-right: 30px;
+    }
+    .headNav.media li.title,li.leftNavIocn{
+        display: none;
+    }
+    .headNav.media li.userInfo{
+        justify-content:flex-end;
+    }
+    .headNav.media li.userInfo .text,.imgList{
+        display: none;
+    }
+
+}
+@media all and (max-width:450px){
+    .headNav.media{
+        padding: 10px 10px;
+    }
+    .headNav.media li.logo,li.title,li.search{
+        display: none;
+    }
+    
+    .headNav.media li.userInfo{
+        justify-content:flex-end;
+    }
+    .headNav.media li.userInfo .text,.imgList{
+        display: none;
+    }
+    .headNav.media li.leftNavIocn{
+        display: block;
+    }
+
+}
+
+
+
+.overall{
+    position: relative;
+}
+/* 头部父级容器布局占用宽度60px */
+.headNav{
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    
+}
+.headNav li{
+    /* line-height: 30px; */
+}
+/* logo占用宽度50px */
+.headNav .logo{
+    flex: 0 0 28px;
+    margin-right: 20px;
+    height: 28px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #ffffff;
+}
+.headNav .logo a{
+    display: block;
+    width: 28px;
+    height: 28px;
+    /* display: inline-block;
+    border-bottom: 30px solid #000000;
+    border-left: 15px solid #ffffff;
+    border-right: 15px solid #ffffff; */
+    background-image: url("./image/github.jpg");
+    background-size: 45px 30px;
+    background-repeat: no-repeat;
+    background-position: -8.5px -1.5px ;
+}
+/* 搜索栏占用宽度300px */
+.headNav .search{
+    flex: 0 0 auto;
+    position: relative;
+    padding-left: 10px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(59, 59, 59);
+    overflow: hidden;
+}
+
+.headNav .search::after{
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: block;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 1px solid #666666;
+    border-radius: 8px;
+}
+.headNav .search::before{
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    display: block;
+    content: "";
+    height: 10px;
+    transform: rotate(-38deg);
+    border-left: 1px solid #666666;
+}
+.headNav .search:hover::after,.search:hover::before{
+    border-color: #000000;
+}
+.headNav .search input{
+    margin: 0;
+    width: 260px;
+    outline: none;
+    border:none;
+    line-height: 30px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color:rgb(59, 59, 59)
+}
+/* 标题部分占用宽度500px */
+.headNav .title{
+    flex: 1 0 270px;
+    padding-left: 30px;
+    /* width: 470px; */
+    height: 30px;
+    overflow: hidden;
+}
+.headNav .title a{
+    display: inline-block;
+    padding: 0 5px;
+    line-height: 30px;
+}
+/*  */
+.headNav .userInfo{
+    flex: 0 0 auto;
+    height: 30px;
+    color: #ffffff;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+}
+.headNav .userInfo div{
+    padding-right: 10px;
+}
+.headNav .userInfo .imgUser{
+    width: 20px;
+    padding-top: 5px;
+}
+.headNav .userInfo .imgUser img{
+    width: 100%;
+}
+.headNav .userInfo .imgList{
+    padding-top: 5px;
+    width: 20px;
+}
+.headNav .userInfo .imgList img{
+    width: 100%;
+}
+.headNav .userInfo .text{
+    line-height: 30px;
+    font-size: 14px;
+}
+/*  */
+.headNav .leftNavIocn{
+    flex: 0 0 20px;
+    /* width: 20px; */
+    height: 23px;
+    padding-top: 7px;
+}
+.headNav .leftNavIocn img{
+    width: 20px;
+}
